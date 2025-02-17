@@ -1,0 +1,16 @@
+# Node generated files
+node_modules
+npm-debug.log
+
+# Build output
+dist
+
+# Intermediate outputs
+src/**/*.js
+src/**/*.js.map
+
+# Generated source files
+src/totk-data-files.json
+
+# Public files are served as-is, thus they are already somewhat minified and don't need to be pretty.
+public

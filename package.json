@@ -1,0 +1,51 @@
+{
+  "name": "zeldadungeon-maps",
+  "version": "2.0.0",
+  "description": "Interactive maps for Zelda games",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "minify-json": "node tools/minify-totk-json.js",
+    "build": "node tools/minify-totk-json.js && tsc && vite build",
+    "stage": "node tools/minify-totk-json.js && tsc && vite build --mode staging",
+    "preview": "vite preview",
+    "format": "prettier --check .",
+    "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,scss,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-8",
+    "@types/leaflet": "^1.9.0",
+    "@types/leaflet.markercluster": "^1.5.1",
+    "leaflet": "^1.9.3",
+    "leaflet-control-window": "^1.0.0",
+    "leaflet.markercluster": "^1.5.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "2.8.4",
+    "sass": "^1.58.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.5",
+    "vite-plugin-html-template": "^0.1.0",
+    "vite-plugin-mpa": "^1.1.4",
+    "vite-plugin-virtual-mpa": "^1.6.0"
+  }
+}
